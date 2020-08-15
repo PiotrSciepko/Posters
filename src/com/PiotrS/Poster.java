@@ -19,7 +19,6 @@ public class Poster {
 
     public List<Integer> findInnerZeros(List<Integer> list) {
         List<Integer> indexOfZeros = new ArrayList<>();
-        //stripZeros(list);
         if (list.contains(0)) {
             for (int i = 0; i < list.size(); i++) {
                 if (list.get(i) == 0) {
@@ -72,31 +71,8 @@ public class Poster {
         //List<Integer> arr = new ArrayList<>(List.of(5,0,2,4,3,0,2,3,8));
 
         Poster p = new Poster();
-        //p.arrangePosters();Posters(arr);
-        ///*
-        while (Collections.frequency(arr, 0) != arr.size()) {
+        p.arrangePosters(arr);
 
-            System.out.println();
-            System.out.println("original " + arr);
-            System.out.println("posters before: " + p.numberOfPosters);
-
-            System.out.println("findZeros " + p.findInnerZeros(arr));
-
-            p.reduceZeros(arr);
-
-            System.out.println("reduceZeros " + arr);
-
-            System.out.println("findZeros " + p.findInnerZeros(arr));
-
-            int index = 0;
-            for (int i : p.findInnerZeros(arr)) {
-                p.addPoster(arr.subList(index, i));
-                System.out.println("subList_" + i + " " + arr.subList(index, i));
-                index = i + 1;
-            }
-            //System.out.println(arr);
-            System.out.println("posters after: " + p.numberOfPosters);
-        }//*/
         System.out.println("\nNumber of posters: " + p.numberOfPosters);
     }
 }
