@@ -9,10 +9,10 @@ public class Poster {
     int numberOfPosters;
 
     public void stripZeros(List<Integer> list) {
-        while (list.size() != 0 && list.get(0) == 0) {
+        while (!list.isEmpty() && list.get(0) == 0) {
             list.remove(0);
         }
-        while (list.size() != 0 && list.get(list.size() - 1) == 0) {
+        while (!list.isEmpty() && list.get(list.size() - 1) == 0) {
             list.remove(list.size() - 1);
         }
     }
@@ -53,14 +53,14 @@ public class Poster {
     }
 
     public void arrangePosters(List<Integer> list) {
-
-        while (Collections.frequency(list, 0) != list.size()) {
+        while (list.size() !=0) {
             reduceZeros(list);
             int index = 0;
             for (int i : findZeros(list)) {
                 addPoster(list.subList(index, i));
                 index = i + 1;
             }
+            stripZeros(list);
         }
     }
 
@@ -77,16 +77,14 @@ public class Poster {
 
         List<Integer> arr = new ArrayList<>(List.of(10, 9, 10, 10, 23, 21, 20, 23, 124, 23, 20, 23, 23, 24, 23, 120, 23, 15, 12, 14, 15, 14, 13, 12, 14, 14, 13, 14, 23, 24, 28, 27, 28, 29, 30, 29, 311, 29, 23, 18, 17, 16, 15, 15, 15, 17, 10, 11, 10, 9, 8, 8, 10, 18, 19, 17, 14, 20, 14, 21));
         //List<Integer> arr = new ArrayList<>(List.of(100, 3, 0, 0, 1, 0, 0, 0, 0, 0, 0, 9));
-        //List<Integer> arr = new ArrayList<>(List.of(5,0,2,4,3,0,2,3,8));
+        //List<Integer> arr = new ArrayList<>(List.of(5,2,4,3,2,3,8));
 
         Poster p = new Poster();
-        p.stripZeros(arr);
-        //p.arrangePosters();Posters(arr);
+        //p.stripZeros(arr);
+        //p.arrangePosters(arr);
         ///*
         //while (Collections.frequency(arr, 0) != arr.size()) {
         while (arr.size() != 0) {
-            //p.stripZeros(arr);
-
             System.out.println();
             System.out.println("original " + arr);
             System.out.println("posters before: " + p.numberOfPosters);
@@ -108,7 +106,8 @@ public class Poster {
             p.stripZeros(arr);
             System.out.println(arr);
             System.out.println("posters after: " + p.numberOfPosters);
-        }//*/
+        }
+        //*/
         System.out.println("\nNumber of posters: " + p.numberOfPosters);
     }
 }
