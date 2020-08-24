@@ -82,9 +82,8 @@ public class Poster {
 
         Poster p = new Poster();
         p.stripZeros(arr);
-        //p.arrangePosters(arr);
-        ///*
-        //while (Collections.frequency(arr, 0) != arr.size()) {
+        p.arrangePosters(arr);
+        /*
         while (arr.size() != 0) {
             System.out.println();
             System.out.println("original " + arr);
@@ -108,7 +107,7 @@ public class Poster {
             System.out.println(arr);
             System.out.println("posters after: " + p.numberOfPosters);
         }
-        //*/
+        */
         System.out.println("\nNumber of posters: " + p.numberOfPosters);
     }
 }
