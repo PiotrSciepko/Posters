@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Poster {
-
     private int numberOfPosters;
 
     public int getNumberOfPosters() {
@@ -93,7 +92,7 @@ public class Poster {
         p.arrangePosters(arr);
         long stop = System.nanoTime();
 
-        //extended runtime messages (comment out "p.arrangePosters()" above):
+        //extended runtime messages (comment out "p.arrangePosters(arr)" above):
         /*
         while (arr.size() != 0) {
             System.out.println();
