@@ -99,15 +99,10 @@ public class Poster {
             System.out.println();
             System.out.println("original " + arr);
             System.out.println("posters before: " + p.numberOfPosters);
-
             System.out.println("findZeros " + p.findZeros(arr));
-
             p.reduceZeros(arr);
-
             System.out.println("reduceZeros " + arr);
-
             System.out.println("findZeros " + p.findZeros(arr));
-
             int index = 0;
             for (int i : p.findZeros(arr)) {
                 p.addPoster(arr.subList(index, i));
