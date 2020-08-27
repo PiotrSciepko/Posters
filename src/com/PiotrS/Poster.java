@@ -90,7 +90,6 @@ public class Poster {
         p.stripZeros(arr);
         long start = System.nanoTime();
         p.arrangePosters(arr);
-        long stop = System.nanoTime();
 
         //extended runtime messages (comment out "p.arrangePosters(arr)" above):
         /*
@@ -113,6 +112,8 @@ public class Poster {
             System.out.println("posters after: " + p.numberOfPosters);
         }
         */
+
+        long stop = System.nanoTime();
         System.out.println("\nNumber of posters: " + p.getNumberOfPosters());
         System.out.println("\nTime elapsed: " + (stop - start) / 1000000. + " ms\n");
     }
