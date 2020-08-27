@@ -16,7 +16,7 @@ public class Poster {
         this.numberOfPosters++;
     }
 
-    public void stripZeros(List<Integer> list) {
+    private void stripZeros(List<Integer> list) {
         while (!list.isEmpty() && list.get(0) == 0) {
             list.remove(0);
         }
@@ -25,7 +25,7 @@ public class Poster {
         }
     }
 
-    public List<Integer> findZeros(List<Integer> list) {
+    private List<Integer> findZeros(List<Integer> list) {
         List<Integer> indexOfZeros = new ArrayList<>();
         if (list.contains(0)) {
             for (int i = 0; i < list.size(); i++) {
@@ -38,7 +38,7 @@ public class Poster {
         return indexOfZeros;
     }
 
-    public void reduceZeros(List<Integer> list) {
+    private void reduceZeros(List<Integer> list) {
         List<Integer> indexOfZeros = findZeros(list);
         int rem = 0;
         if (indexOfZeros.size() > 1) {
@@ -51,7 +51,7 @@ public class Poster {
         }
     }
 
-    public void addPoster(List<Integer> list) {
+    private void addPoster(List<Integer> list) {
         int min = Collections.min(list);
         for (int i = 0; i < list.size(); i++) {
             list.set(i, list.get(i) - min);
@@ -59,7 +59,7 @@ public class Poster {
         setNumberOfPosters();
     }
 
-    public void arrangePosters(List<Integer> list) {
+    private void arrangePosters(List<Integer> list) {
         while (list.size() != 0) {
             reduceZeros(list);
             int index = 0;
