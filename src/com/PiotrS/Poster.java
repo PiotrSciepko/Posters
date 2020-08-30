@@ -94,8 +94,7 @@ public class Poster {
         //extended runtime messages (comment out "p.arrangePosters(arr)" above):
         /*
         while (arr.size() != 0) {
-            System.out.println();
-            System.out.println("original " + arr);
+            System.out.println("\noriginal " + arr);
             System.out.println("posters before: " + p.numberOfPosters);
             System.out.println("findZeros " + p.findZeros(arr));
             p.reduceZeros(arr);
