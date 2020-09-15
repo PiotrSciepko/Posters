@@ -43,7 +43,7 @@ public class Poster {
         int rem = 0;
         if (indexOfZeros.size() > 1) {
             for (int i = 0; i < indexOfZeros.size() - 1; i++) {
-                if (indexOfZeros.get(i+1) - indexOfZeros.get(i) == 1) {
+                if (indexOfZeros.get(i + 1) - indexOfZeros.get(i) == 1) {
                     list.remove(indexOfZeros.get(i) - rem);
                     rem++;
                 }
